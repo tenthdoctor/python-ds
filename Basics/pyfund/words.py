@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Retrieve and print words from a URL.
 
 Usage:
@@ -15,7 +16,7 @@ def fetch_words(url):
 
     Returns:
         A list of strings containing the words from the document.
-    """"
+    """
     with urlopen(url) as story:
         story_words = []
         for line in story:
@@ -46,4 +47,4 @@ def main(url):
 
 
 if __name__ == '__main__':
-    main(sys.argv[1])
+    main(sys.argv[1]) # The Oth argv is the filename
